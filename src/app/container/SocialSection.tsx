@@ -2,19 +2,20 @@ import React     from "react";
 
 import Icon from "@component/svg/Icon";
 
-interface Skill {
+interface Social {
   Icon  : React.ComponentType<any>;
   label : string;
   color : string;
+  link  : string;
 }
 
 interface SocialSectionProps {
   title     : string;
-  skills    : Skill[];
+  skills    : Social[];
   iconSize? : string;
 }
 
-const SkillsSection: React.FC<SocialSectionProps> = ({
+const SocialSection: React.FC<SocialSectionProps> = ({
   title,
   skills,
   iconSize = "w-8 sm:w-9 h-8 sm:h-9",
@@ -25,12 +26,13 @@ const SkillsSection: React.FC<SocialSectionProps> = ({
         {title}
       </h2>
       <div className="flex justify-center space-x-6 mb-6">
-        {skills.map((skill, index) => (
+        {skills.map((social, index) => (
           <Icon
             key={index}
-            Icon={skill.Icon}
-            label={skill.label}
-            color={skill.color}
+            Icon={social.Icon}
+            label={social.label}
+            color={social.color}
+            link={social.link}
             iconSize={iconSize}
           />
         ))}
@@ -39,6 +41,6 @@ const SkillsSection: React.FC<SocialSectionProps> = ({
   );
 };
 
-export default SkillsSection;
+export default SocialSection;
 
-// path: src/app/container/SkillsSection.tsx
+// path: src/app/container/SocialSection.tsx
