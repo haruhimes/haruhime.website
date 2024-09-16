@@ -2,6 +2,7 @@ import {
     SiDiscord,
     SiGithub,
     SiOsu,
+    SiNamemc
 }                                               from "react-icons/si";
 
 import { Card, CardBody }                       from "@nextui-org/card";
@@ -9,16 +10,15 @@ import { Divider }                              from "@nextui-org/divider";
 import { Image }                                from "@nextui-org/image";
 import { Link }                                 from "@nextui-org/link";
 
-import TextTyper                                from "@component/text/TextTyper";
-
 import SocialSection                            from "@container/SocialSection";
 
 export default function Page() {
 
     const socials = [
-        { Icon: SiOsu,     label: "osu!",    color: "text-pink" },
-        { Icon: SiDiscord, label: "Discord", color: "text-blue"   },
-        { Icon: SiGithub,  label: "GitHub" , color: "text-surface1" },
+        { Icon: SiOsu,     label: "osu!",    link: "https://osu.ppy.sh/users/12231334",             color: "text-pink" },
+        { Icon: SiDiscord, label: "Discord", link: "https://discord.com/users/1134618459926433812", color: "text-blue"   },
+        { Icon: SiGithub,  label: "GitHub" , link: "https://GitHub.com/haruimes",                   color: "text-surface1" },
+        { Icon: SiNamemc,  label: "NameMC" , link: "https://namemc.com/profile/Haruhime.3",         color: "text-green"   }
     ];
 
     return (
@@ -33,17 +33,11 @@ export default function Page() {
                         className="rounded-full border-4 border-surface0 shadow-lg mb-4 sm:mb-5"
                     />
 
-                    <h1 className="text-center text-text text-lg sm:text-xl font-bold mb-2 sm:mb-3">
-                        <TextTyper />
+                    <h1 className="text-subtext0 text-center text-sm mb-1 sm:mb-2">
+                        Haruhime
                     </h1>
 
-                    <p className="text-subtext0 text-center text-sm mb-1 sm:mb-2">
-                        Haruhime osu!
-                    </p>
-
-                    <Divider className="my-3 sm:my-4 bg-surface2 opacity-20" />
-
-                    <SocialSection title="Connect with me" skills={socials} iconSize="w-8 sm:w-9 h-8 sm:h-9" />
+                    <SocialSection title="" skills={socials} iconSize="w-8 sm:w-9 h-8 sm:h-9" />
                 </CardBody>
             </Card>
 
