@@ -2,7 +2,8 @@ import {
     SiDiscord,
     SiGithub,
     SiOsu,
-    SiNamemc
+    SiNamemc,
+    SiTesla,
 }                                               from "react-icons/si";
 
 import { Card, CardBody }                       from "@nextui-org/card";
@@ -15,10 +16,11 @@ import SocialSection                            from "@container/SocialSection";
 export default function Page() {
 
     const socials = [
-        { Icon: SiOsu,     label: "osu!",    link: "https://osu.ppy.sh/users/12231334",             color: "text-pink"     },
-        { Icon: SiDiscord, label: "Discord", link: "https://discord.com/users/1134618459926433812", color: "text-blue"     },
-        { Icon: SiGithub,  label: "GitHub" , link: "https://GitHub.com/haruhimes",                  color: "text-surface1" },
-        { Icon: SiNamemc,  label: "NameMC" , link: "https://namemc.com/profile/Haruhime.3",         color: "text-surface0" }
+        { Icon: SiOsu,     label: "osu!",    link: "https://osu.ppy.sh/users/12231334/",             color: "text-pink"     },
+        { Icon: SiDiscord, label: "Discord", link: "https://discord.com/users/1134618459926433812/", color: "text-blue"     },
+        { Icon: SiGithub,  label: "GitHub" , link: "https://GitHub.com/haruhimes/",                  color: "text-surface1" },
+        { Icon: SiNamemc,  label: "NameMC" , link: "https://namemc.com/profile/Haruhime./",          color: "text-surface0" },
+        { Icon: SiTesla,   label: "Tetr.io", link: "https://ch.tetr.io/u/haruhime/",                 color: "text-green"    },
     ];
 
     return (
