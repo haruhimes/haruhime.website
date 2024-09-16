@@ -1,4 +1,4 @@
-import React     from "react";
+import React from "react";
 
 import Icon from "@component/svg/Icon";
 
@@ -25,7 +25,7 @@ const SocialSection: React.FC<SocialSectionProps> = ({
       <h2 className="text-subtext1 text-xl font-semibold mb-4">
         {title}
       </h2>
-      <div className="flex justify-center space-x-6 mb-6">
+      <div className="flex flex-col items-center space-y-6 mb-6">
         {skills.map((social, index) => (
           <Icon
             key={index}
