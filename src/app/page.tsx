@@ -22,7 +22,7 @@ export default function Page() {
         { Icon: SiGithub,  label: "GitHub" , link: "https://GitHub.com/haruhimes/",                  color: "text-surface1" },
         { Icon: SiNamemc,  label: "NameMC" , link: "https://namemc.com/profile/Haruhime./",          color: "text-surface0" },
         { Icon: SiTesla,   label: "Tetr.io", link: "https://ch.tetr.io/u/haruhime/",                 color: "text-green"    },
-        { Icon: SiTwitch,  label: "Twitch" , link: "https://twitch.tv/haruhimeosu",                  color: "text-purple"   },
+        { Icon: SiTwitch,  label: "Twitch" , link: "https://twitch.tv/haruhimeosu",                  color: "text-mauve"    },
     ];
 
     return (
