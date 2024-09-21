@@ -3,31 +3,36 @@ import {
     SiGithub,
     SiOsu,
     SiNamemc,
-    SiTesla,
     SiTwitch
-}                                               from "react-icons/si";
+} from "react-icons/si";
 
-import { Card, CardBody }                       from "@nextui-org/card";
-import { Divider }                              from "@nextui-org/divider";
-import { Image }                                from "@nextui-org/image";
-import { Link }                                 from "@nextui-org/link";
+import { Card, CardBody } from "@nextui-org/card";
+import { Image } from "@nextui-org/image";
+import { Link } from "@nextui-org/link";
 
-import SocialSection                            from "@container/SocialSection";
+import SocialSection from "@container/SocialSection";
+
+const SiTetris = () => {
+    return (
+        <div className="group relative w-8 h-8">
+            <Image src="/tetris.png" alt="Tetr.io icon" style={{ objectFit: 'cover' }} />
+        </div>
+    );
+};
 
 export default function Page() {
-
     const socials = [
-        { Icon: SiOsu,     label: "osu!",    link: "https://osu.ppy.sh/users/12231334",             color: "text-pink"     },
-        { Icon: SiDiscord, label: "Discord", link: "https://discord.com/users/1134618459926433812", color: "text-blue"     },
-        { Icon: SiGithub,  label: "GitHub" , link: "https://GitHub.com/haruhimes",                  color: "text-surface1" },
-        { Icon: SiNamemc,  label: "NameMC" , link: "https://namemc.com/profile/Haruhime.3",         color: "text-surface0" },
-        { Icon: SiTesla,   label: "Tetr.io", link: "https://ch.tetr.io/u/haruhime",                 color: "text-green"    },
-        { Icon: SiTwitch,  label: "Twitch" , link: "https://twitch.tv/haruhimeosu",                 color: "text-mauve"    },
+        { Icon: SiOsu, label: "osu!", link: "https://osu.ppy.sh/users/12231334", color: "text-pink" },
+        { Icon: SiDiscord, label: "Discord", link: "https://discord.com/users/1134618459926433812", color: "text-blue" },
+        { Icon: SiGithub, label: "GitHub", link: "https://GitHub.com/haruhimes", color: "text-surface1" },
+        { Icon: SiNamemc, label: "NameMC", link: "https://namemc.com/profile/Haruhime.3", color: "text-surface0" },
+        { Icon: SiTetris, label: "Tetr.io", link: "https://ch.tetr.io/u/haruhime", color: "text-green" },
+        { Icon: SiTwitch, label: "Twitch", link: "https://twitch.tv/haruhimeosu", color: "text-mauve" },
     ];
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-base to-mantle p-4 sm:p-6">
-            <Card className="bg-crust rounded-3xl shadow-2xl max-w-lg sm:max-w-xl p-4 sm:p-6">
+            <Card className="bg-crust rounded-1xl shadow-2xl max-w-lg sm:max-w-xl p-4 sm:p-6">
                 <CardBody className="flex flex-col items-center">
                     <Image
                         src="https://avatars.githubusercontent.com/u/140860369?v=4"
@@ -41,7 +46,7 @@ export default function Page() {
                         Haruhime
                     </h1>
 
-                    <SocialSection title="" skills={socials} iconSize="w-8 sm:w-9 h-8 sm:h-9" />
+                    <SocialSection title="" socials={socials} iconSize="w-8 h-8" />
                 </CardBody>
             </Card>
 
